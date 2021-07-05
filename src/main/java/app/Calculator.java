@@ -11,10 +11,10 @@ public class Calculator {
     private final NotationTransformer notationTransformer;
     private final ExpressionEvaluator expressionEvaluator;
 
-    public Calculator() {
-        this.expressionParser = new ExpressionParser();
-        this.notationTransformer = new NotationTransformer();
-        this.expressionEvaluator = new ExpressionEvaluator();
+    public Calculator(ExpressionParser expressionParser, NotationTransformer notationTransformer, ExpressionEvaluator expressionEvaluator) {
+        this.expressionParser = expressionParser;
+        this.notationTransformer = notationTransformer;
+        this.expressionEvaluator = expressionEvaluator;
     }
 
     public String evaluate(String expression) {
